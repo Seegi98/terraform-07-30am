@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git clone') {
+            steps {
+            git branch: 'main', url: 'https://github.com/PrasadDanduPD/terraform-07-30am.git'
+            }
+        }
+        stage('init') {
+            steps {
+                dir("day-3-custom-network"){
+              sh 'terraform init'
+                }
+            }
+        }
+                stage('apply') {
+            steps {
+                dir("day-3-custom-network"){
+              sh 'terraform ${couple} -auto-approve'
+                }
+            }
+        }
+         
+       
+    }
+}
