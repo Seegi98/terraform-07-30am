@@ -1,4 +1,4 @@
-data "aws_ami" "amzonlinux" {
+data "aws_ami" "amznlinux" {
   most_recent = true
   owners = [ "amazon" ]
   filter {
