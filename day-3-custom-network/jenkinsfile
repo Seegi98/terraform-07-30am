@@ -7,7 +7,7 @@ pipeline {
            git branch: 'main', url: 'https://github.com/Seegi98/terraform-07-30am.git'
             }
         }
-        stage('init') {
+        stage('int') {
             steps {
                 dir("day-3-custom-network"){
               sh 'terraform init'
