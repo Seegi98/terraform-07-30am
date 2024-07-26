@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('git cle') {
             steps {
-         //  git branch: 'main', url: 'https://github.com/Seegi98/terraform-07-30am.git'
+           git branch: 'main', url: 'https://github.com/Seegi98/terraform-07-30am.git'
             }
         }
         stage('int') {
